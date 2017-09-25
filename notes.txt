@@ -1,0 +1,56 @@
+sed options [address] commands file(s)
+
+-i updates the actual file, instead of just displaying updated output to the
+standard output
+
+
+#Substitute
+sed 's/searchPattern/replaceText/flags' file
+
+#1st occurence
+sed 's/Dephi/Bangalore/' data.txt
+
+#specific occurence
+sed 's/Delhi/Bangarlore/3' data.txt
+
+#all occurence (g=global)
+sed 's/Delhi/Bangarlore/g' data.txt
+
+#print where replacement is done
+sed 's/Delhi/Bangarlore/p' data.txt
+
+#save modified lines to a file
+sed 's/Delhi/Bangarlore/w file' data.txt
+
+#to update the whole file, use redirection
+
+#delete or change the text to nothing
+sed 's/Delhi//g file' data.txt
+
+
+
+#Addressing
+
+#when no address, then it changes all lines
+
+- line addressing samples
+  sed '4s/str1/str2/' data.txt    #4th line
+  sed '3,8s/str1/str2/' data.txt  #from line 3 to 8 
+  sed '5,$s/str1/str2/' data.txt  # from 5th to the last line 
+  sed '$s/str1/str2/' data.txt   #last line
+  
+- context addressing
+  sed '/pattern/s/str1/str2/' data.txt
+  sed '/pattern1/,/pattern2/s/str1/str2/' data.txt
+  sed '3,/pattern/s/str1/str2/' data.txt  #all lines from line 3 with the line
+  that contains first occurence of the pattern
+  sed '/pattern/,9s/str1/str2/' data.txt  #all lines with the first occurrence
+  of the pattern
+  sed '/pattern/,+4s/str1/str2/' data.txt #all lines that contains first
+  occurence of the pattern and next 4 lines
+
+
+#negate
+using "!"
+  
+  sed '4!s/str1/str2/' data.txt

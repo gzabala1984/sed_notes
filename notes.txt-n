@@ -1,0 +1,29 @@
+sed options [address] commands file(s)
+
+-i updates the actual file, instead of just displaying updated output to the
+standard output
+
+
+#Substitute
+sed 's/searchPattern/replaceText/flags' file
+
+#1st occurence
+sed 's/Dephi/Bangalore/' data.txt
+
+#specific occurence
+set 's/Delhi/Bangarlore/3' data.txt
+
+#all occurence (g=global)
+set 's/Delhi/Bangarlore/g' data.txt
+
+#print where replacement is done
+set 's/Delhi/Bangarlore/p' data.txt
+
+#save modified lines to a file
+set 's/Delhi/Bangarlore/w file' data.txt
+
+#to update the whole file, use redirection
+
+#delete or change the text to nothing
+sed 's/Delhi//g file' data.txt
+

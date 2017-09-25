@@ -1,0 +1,11 @@
+Hello World!
+I'm trying to learn SED command today!
+I'm too sleepy as of the moment though. :)
+Hello World!
+Hello World!
+This is just for testing!
+Oracle 11gR2   11.2.0.4
+Oracle 11gR1   11.1.0.7
+Oracle 10gR2   10.2.0.5
+Oracle 12cR1   12.1.0.2
+Oracle 9i       9.2.0.8
