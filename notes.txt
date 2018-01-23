@@ -54,3 +54,9 @@ sed 's/Delhi//g file' data.txt
 using "!"
   
   sed '4!s/str1/str2/' data.txt
+
+
+#Delete
+  sed 'd' data.txt # delete all lines
+  sed '3,7d' data.txt #delete using address
+  sed '/pattern/d' data.txt #delet using context 
